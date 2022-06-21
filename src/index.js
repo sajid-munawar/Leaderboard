@@ -1,3 +1,4 @@
-const h1=document.querySelector('.heading')
-console.log(h1);
-h1.textContent='Update with js'
+import './style.css';
+import { scores } from './modules/scores.js';
+
+localStorage.setItem('scores',JSON.stringify(scores))
