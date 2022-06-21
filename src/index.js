@@ -1,4 +1,4 @@
 import './style.css';
-import { scores } from './modules/scores.js';
+import scores from './modules/scores.js';
 
-localStorage.setItem('scores',JSON.stringify(scores))
+localStorage.setItem('scores', JSON.stringify(scores));
