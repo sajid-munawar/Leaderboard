@@ -1,32 +1,34 @@
-const scoresContainer = document.querySelector('.scores-container');
+export const refreshScores = async () => {
+  const scoresContainer = document.querySelector('.scores-container');
+  scoresContainer.innerHTML = '';
+  const response = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/wqOFudaUN1eOIEowFYFO/scores/',
+  );
+  const json = await response.json();
 
-const scores = [
-  {
-    name: 'Name',
-    score: 100,
-  },
-  {
-    name: 'Name',
-    score: 340,
-  },
-  {
-    name: 'Name',
-    score: 60,
-  },
-  {
-    name: 'Name',
-    score: 80,
-  },
-  {
-    name: 'Name',
-    score: 10,
-  },
-];
-
-scores.forEach((score) => {
-  scoresContainer.innerHTML += `
-    <div><span>${score.name} :</span><span>${score.score}</span></div>
+  json.result.forEach((score) => {
+    scoresContainer.innerHTML += `
+    <div><span>${score.user} :</span><span>${score.score}</span></div>
     `;
-});
+  });
+};
 
-export default scores;
+export const addScore = async (e) => {
+  const response = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/wqOFudaUN1eOIEowFYFO/scores/',
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        name: 'My cool new game',
+        user: `${e.target.name.value}`,
+        score: `${e.target.score.value}`,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    },
+  );
+  return response;
+};
+
+window.addEventListener('load', refreshScores);
