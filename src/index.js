@@ -1,4 +1,15 @@
 import './style.css';
-import scores from './modules/scores.js';
+import { addScore,refreshScores } from './modules/scores.js';
+const form = document.querySelector('.form');
+const refresh = document.querySelector('.refresh')
 
-localStorage.setItem('scores', JSON.stringify(scores));
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    addScore(e);
+    form.reset()
+})
+
+refresh.addEventListener('click', () => {
+    refreshScores()
+})
