@@ -1,28 +1,28 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To do list
+# Leaderboard
 
-> This is a website that allows users to add/remove tasks for the day
+> This is a website that allows users to add scores with their name
 
 
 ## Built With
 
 - HTML
-- CSS 
-- Javascript
+- Bootstrap
+- JavaScript
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 - Clone repository in your local machine 
-- cd todo
+- cd Leaderboard
 - open `index.html` in your browser.
 - You can use live server.
 
 ## Live Demo
 
-[Todo Live](https://sajid-munawar.github.io/Todo-do-list/)
+[Todo Live](https://sajid-munawar.github.io/Leaderboard/)
 
 ## Author
 
@@ -35,7 +35,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/sajid-munawar/Todo-do-list/issues)
+Feel free to check the [issues page](https://github.com/sajid-munawar/Leaderboard/issues)
 
 ## Show your support
 

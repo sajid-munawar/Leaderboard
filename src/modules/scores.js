@@ -8,7 +8,7 @@ export const refreshScores = async () => {
 
   json.result.forEach((score) => {
     scoresContainer.innerHTML += `
-    <div><span>${score.user} :</span><span>${score.score}</span></div>
+    <div class='p-1'><span>${score.user} :</span><span>${score.score}</span></div>
     `;
   });
 };
